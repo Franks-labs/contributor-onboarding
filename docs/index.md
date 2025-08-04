@@ -15,7 +15,7 @@ If you choose to mirror the practice repo instead of forking it (see below), you
 time an Asterix appears in the documentation. It is recommended that the first team leader is the one who is most 
 experienced with git. 
 
-### Technical Requirements
+### Technical Requirements!!!
 
 Each student in the group should meet the following requirements:
 
