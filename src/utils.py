@@ -87,8 +87,6 @@ def element_wise_multiply(a: np.array, b: np.array) -> np.array:
         
     except ValueError as e:
         raise ValueError(f"Arrays cannot be multiplied element-wise: {str(e)}")
-    except Exception as e:
-        raise Exception(f"Unexpected error during multiplication: {str(e)}")
     
     
 def return_hexadecimal(a: int) -> float:
