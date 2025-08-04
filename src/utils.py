@@ -56,25 +56,39 @@ def modulo(a: int, b: int):
     '''
 
     # I think this could be made more efficient?
-    result = a - (np.floor(a / b) * b)
+    result = a%b
 
     return result
 
 def element_wise_multiply(a: np.array, b: np.array) -> np.array:
     '''
-    ...
-
+    Performs element-wise multiplication of two numpy arrays.
+    
     Args:
-    a: np.array
-    b: np.array
+    a: np.array - first array
+    b: np.array - second array
 
     Returns:
-    np.array
+    np.array - element-wise product of a and b
+    
+    Raises:
+    ValueError: if arrays cannot be broadcast together
+    TypeError: if inputs are not numpy arrays
     '''
-
-    # let's hope that both vectors have the same shape
-
-    return np.multiply(a, b)
+    
+    try:
+        # Check if inputs are numpy arrays
+        if not isinstance(a, np.ndarray) or not isinstance(b, np.ndarray):
+            raise TypeError("Both inputs must be numpy arrays")
+        
+        # Perform element-wise multiplication with automatic broadcasting
+        result = np.multiply(a, b)
+        return result
+        
+    except ValueError as e:
+        raise ValueError(f"Arrays cannot be multiplied element-wise: {str(e)}")
+    except Exception as e:
+        raise Exception(f"Unexpected error during multiplication: {str(e)}")
 
 def return_hexadecimal(a: int) -> float:
     '''
