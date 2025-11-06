@@ -59,17 +59,24 @@ def modulo(a: int, b: int):
 
 def element_wise_multiply(a: np.array, b: np.array) -> np.array:
     '''
-    ...
+    Element-wise multiply two numpy arrays.
 
     Args:
-    a: np.array
-    b: np.array
+        a: np.ndarray -- first input array
+        b: np.ndarray -- second input array
 
     Returns:
-    np.array
-    '''
+        np.ndarray: element-wise product of a and b
 
-    # let's hope that both vectors have the same shape
+    Raises:
+        TypeError: if either a or b is not a numpy.ndarray
+        ValueError: if a and b do not have the same shape
+    '''
+    if not isinstance(a, np.ndarray) or not isinstance(b, np.ndarray):
+        raise TypeError("Both 'a' and 'b' must be numpy.ndarray")
+
+    if a.shape != b.shape:
+        raise ValueError(f"Shape mismatch: a.shape={a.shape}, b.shape={b.shape}")
 
     return np.multiply(a, b)
 
