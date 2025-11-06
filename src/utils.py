@@ -28,7 +28,7 @@ def multiply(a, b) -> float:
     Returns:
     float
     '''
-    return a * b
+    return print("result:", a * b)
 
 def divide(a: float, b: float) -> float:
     '''
