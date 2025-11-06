@@ -4,7 +4,7 @@ import numpy as np
 # TODO: make all functions work with strings as well
 # TODO: add a new cool calculator function
 
-def sum(a: int, b: int) -> int:
+def sum(a: float, b: float) -> float:
     '''
     This function returns the sum of two numbers
 
