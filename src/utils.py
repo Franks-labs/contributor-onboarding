@@ -30,18 +30,18 @@ def multiply(a, b) -> float:
     '''
     return a * b
 
-def divide(a: float, b: float) -> float:
-    '''
-    ...
+def multiply(a: float, b: float) -> float:
+    """
+    Returns the product of two numbers.
 
     Args:
-    a: float the number to be divided
-    b: float the divisor
+        a (float): The first number.
+        b (float): The second number.
 
     Returns:
-    float
-    '''
-    return a / b
+        float: The product of `a` and `b`.
+    """
+    return a * b
 
 def modulo(a: int, b: int):
     '''
