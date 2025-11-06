@@ -74,19 +74,18 @@ def element_wise_multiply(a: np.array, b: np.array) -> np.array:
     return np.multiply(a, b)
 
 # change output type of return_hexadecimal function
-def return_hexadecimal(a: int) -> str:
+def return_hexadecimal(decimal_number: int) -> str:
     '''
-    ...
+        Convert a decimal integer to a hexadecimal string without "0x" prefix.
 
     Args:
-    a: float
-    b: float
+        decimal_number (int): The input number in decimal.
 
     Returns:
-    float
-    '''
+        str: The hexadecimal representation of the number.
 
-    return hex(a)
+    '''
+    return hex(decimal_number)[2:] 
 
 
 def return_random_number() -> int:
