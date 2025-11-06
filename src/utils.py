@@ -74,16 +74,15 @@ def element_wise_multiply(a: np.array, b: np.array) -> np.array:
     return np.multiply(a, b)
 
 # change output type of return_hexadecimal function
-def return_hexadecimal(a: int) -> str:
+def return_hexadecimal(a: int) -> int:
     '''
-    ...
+    Turns an interger to its hexicecimal.
 
     Args:
-    a: float
-    b: float
+    a: int
 
     Returns:
-    float
+    int
     '''
 
     return hex(a)
